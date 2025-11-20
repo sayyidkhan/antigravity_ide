@@ -36,12 +36,12 @@ jobs:
 
       - name: Download AntiGravity Installer
         run: |
-          curl -L -o Antigravity-Windows-x64-User-1.0.0.exe \
+          curl -L -o Antigravity-Windows-x64-User-1.11.3.exe \
           https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.11.3-6583016683339776/windows-x64/Antigravity.exe
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME }}
-          files: Antigravity-Windows-x64-User-1.0.0.exe
+          files: Antigravity-Windows-x64-User-1.11.3.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
